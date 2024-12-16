@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yatiken About US</title>
+    <meta name="description"
+        content="Yatiken - Best IT services company in India. We are innovators in tech solutions, delivering excellence worldwide with creativity and expertise.">
+    <meta name="keywords" content="Yatiken - Best IT company in India">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yatiken About US">
+    <meta property="og:description"
+        content="Yatiken - Best IT services company in India. We are innovators in tech solutions, delivering excellence worldwide with creativity and expertise.">
+    <meta property="og:image" content="../images/logo/yatiken-logo.png">
+    <meta property="og:url" content="https://www.yatiken.in/contact">
+    <meta property="og:type" content="website">
+    <!-- Stylesheets -->
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/responsive.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" id="jssDefault" href="../css/custom/theme-2.css"/>
+<!-- Favicons and Apple Touch Icon -->
+<link rel="icon" href="../images/favicon.png" sizes="32x32" />
+<link rel="icon" href="../images/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../images/favicon.png" />
+<style>
+    .team-info h4{
+  color: #263559;
+}
+    .team-info span{
+  color: #8f8d8d;
+  font-style: normal;
+}
+.about-section a{
+ color: #263559;
+}
+</style>
+</head>
+<!-- page wrapper -->
+<body class="page-wrapper">
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+    <!-- main header area -->
+    <script src="../js/header.js"></script>
+    <!-- end main header area -->
+    <!-- page title -->
+    <div class="about-bg water-drop-bg centered">
+        <div class="container">
+            <div class="text">Water Drop</div>
+        </div>
+    </div>
+    <!-- end page title -->
+    <!-- bread-crumb -->
+    <div class="bread-crumb">
+        <div class="container">
+            <div class="text"><a href="../">Home</a><i class="fa fa-angle-right"></i> Water Drop
+            <!-- <div class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</div> -->
+            </div>
+        </div>
+    </div>
+    <!-- bread crumb end -->
+    
+    <section class="error-section error-page text-center">
+        <div class="container">
+           <div class="row">
+               <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 error-colmun">
+                   <div class="error-title">301</div> 
+                   <div class="error-content">
+                       <h2 class="section-title">Work in Progrress</h2>
+                       <div class="text">
+                            <p>The page you are looking for was moved, removed, renamed or might never.</p>
+                        </div>
+                        <div class="input-box">
+                            <form action="#">
+                                <input type="text" placeholder="Search again">
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                       <div class="error-btn">
+                           <a href="index.html" class="btn-one style-one radi">Go Back Home</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </section>
+    
+    
+    <!-- call-back-section -->
+    <section class="call-back sec-pad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 colmun">
+                    <div class="call-back-content">
+                        <div class="call-back-title">
+                            <div class="section-title"><h2>Request A <span>Call Back</span></h2></div>
+                            <div class="title-text"><p>Need help? Request a callback now and our team will get in touch with you shortly! </p></div>
+                        </div>
+                        <div class="form-area wow fadeInUp animated animated">
+                            <form id="callBackForm" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 colmun">
+                                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 colmun">
+                                        <input type="email" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 colmun">
+                                        <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 colmun">
+                                        <div class="select-box">
+                                            <i class="fa fa-angle-down"></i>
+                                            <select class="custom-select-box" id="service" name="service" required>
+                                                <option value="">Select a Topic</option>
+                                                <option value="Digital marketing">Digital marketing</option>
+                                                <option value="IT solutions">IT solutions</option>
+                                                <option value="Consultation Services">Consultation Services</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <button class="btn-one style-one radi" type="submit">Send Request</button>
+                                    <span id="responseMessage" style="margin-left: 10px;margin-top: 30px;font-size: 20px;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-style: normal;"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- call-back-section end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#callBackForm').on('submit', function(e) {
+                e.preventDefault(); // Prevent the form from submitting traditionally
+    
+                var formData = $(this).serialize(); // Serialize the form data
+    
+                $.ajax({
+                    type: 'POST',
+                    url: '../submit_request.php', // Your PHP file
+                    data: formData,
+                    success: function(response) {
+                        // Display success message
+                        $('#responseMessage').text(response).css('color', 'green').fadeIn().delay(3000).fadeOut();
+                        
+                        // Reset the form fields
+                        $('#callBackForm')[0].reset();
+                    },
+                    error: function() {
+                        // Display error message
+                        $('#responseMessage').text('An error occurred. Please try again.').css('color', 'red').fadeIn().delay(3000).fadeOut();
+                    }
+                });
+            });
+        });
+    </script>
+    <hr>
+     <!-- main footer area -->
+     <script src="../js/footer.js"></script>
+     <!-- main footer area end -->
+<!--End pagewrapper-->
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+<!--jquery js -->
+<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../js/validation.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/bxslider.js"></script>
+<script type="text/javascript" src="../js/SmoothScroll.js"></script>
+<script type="text/javascript" src="../js/jQuery.style.switcher.min.js"></script>
+<script src="../js/script.js"></script>
+<!-- End of .page_wrapper -->
+</body>
+</html>
